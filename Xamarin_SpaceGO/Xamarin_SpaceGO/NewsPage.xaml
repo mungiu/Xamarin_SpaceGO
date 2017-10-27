@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage BackgroundColor="Black" 
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Xamarin_SpaceGO.NewsPage">
@@ -68,5 +69,11 @@ refine and sell to nearby space stations as fuel.
                            IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"
                            AbsoluteLayout.LayoutBounds="0.5,0.5, 25,25"
                            AbsoluteLayout.LayoutFlags="PositionProportional"/>
+        <ic:CircleImage
+            WidthRequest="30"
+            HeightRequest="30"
+            Aspect="AspectFill"
+            Source="http://data.whicdn.com/images/698884/original.jpg"
+            Margin="5"/>
     </AbsoluteLayout>
 </ContentPage>
