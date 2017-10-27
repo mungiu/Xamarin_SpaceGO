@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="#354242" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.DialerPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform = "iOS" Value="0,20,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <Grid Padding="40"
+              RowSpacing="10"
+              ColumnSpacing="10"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition Width="50"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="1234"
+                   FontSize="50"
+                   Grid.Row="0" 
+                   Grid.ColumnSpan="3" 
+                   TextColor="WhiteSmoke"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
+            <Button Text="1" 
+                    Grid.Row="1" 
+                    Grid.Column="0" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="30"/>
+            <Button Text="2"
+                    Grid.Row="1" 
+                    Grid.Column="1"
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="3"
+                    Grid.Row="1" 
+                    Grid.Column="2"  
+                    TextColor="#28282c" 
+                    BorderRadius="15"
+                    BackgroundColor="WhiteSmoke"/>
+            <Button Text="4"
+                    Grid.Row="2" 
+                    Grid.Column="0" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="5"
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="6"
+                    Grid.Row="2" 
+                    Grid.Column="2" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="7"
+                    Grid.Row="3" 
+                    Grid.Column="0" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="8"
+                    Grid.Row="3" 
+                    Grid.Column="1"  
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="9" 
+                    Grid.Row="3" 
+                    Grid.Column="2" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="0"
+                    Grid.Row="4" 
+                    Grid.Column="1" 
+                    TextColor="#28282c" 
+                    BackgroundColor="WhiteSmoke"
+                    BorderRadius="15"/>
+            <Button Text="Dial" 
+                    Grid.Row="5"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="#96ca2d"
+                    TextColor="#28282c"
+                    BorderRadius="15"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.GreetPage">
+    <StackLayout HorizontalOptions="Center" 
+                 VerticalOptions="Start">
+        <StackLayout.Margin>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform = "iOS" Value="0,20,0,0"/>
+                <On Platform = "Android" Value="20,30,20,20"/>
+                <On Platform = "WinPhone, Windows" Value="20,40,20,20"/>
+            </OnPlatform>
+        </StackLayout.Margin>
+        <Label Text="Goal progress:"/>
+        <Label 
+            BindingContext="{x:Reference slider}"
+            Text="{Binding Value, StringFormat='{0:P0}'}"
+            HorizontalTextAlignment="Center"/>
+        <Slider x:Name="slider"/>
+    </StackLayout>
+</ContentPage>

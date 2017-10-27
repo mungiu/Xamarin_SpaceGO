@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.QuotesPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <StackLayout.Margin>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform = "iOS" Value="0,20,0,0"/>
+                        <On Platform = "Android" Value="20,30,20,20"/>
+                        <On Platform = "WinPhone, Windows" Value="20,40,20,20"/>
+                    </OnPlatform>
+                </StackLayout.Margin>
+                <Label
+                BindingContext="{x:Reference slider}"
+                Text="{Binding Value, StringFormat='Font size is: {0:F0}'}"/>
+                <Slider
+                WidthRequest="1000"
+                Maximum="50"
+                Minimum="16"
+                x:Name="slider"/>
+                <Label
+                BindingContext="{x:Reference slider}"
+                FontSize="{Binding Value}"
+                x:Name="currentQuote"/>
+                <Button
+                HorizontalOptions="Center"
+                Text="Next Quote"
+                Clicked="BtnNextQuote_Clicked"
+                x:Name="btnNextQuote"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

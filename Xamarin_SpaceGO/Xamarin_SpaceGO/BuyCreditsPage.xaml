@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.BuyCreditsPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS" Value="0,20,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <RelativeLayout>
+        <BoxView x:Name="upperBar" 
+                 Color="#f7f7f7"
+                 RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}"/>
+        <StackLayout Spacing="0"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}"
+                 RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Height,
+            Factor=0.3}">
+            <Label x:Name="currentCredits"
+                   TextColor="#33353a"
+                   FontSize="60"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=uppderBar,
+            Property=Width,
+            Factor=1}"
+                     RelativeLayout.HeightConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=uppderBar,
+            Property=Height,
+            Factor=1}"/>
+            <Button x:Name="addCredits"
+                    Text="Add credits"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="#1695A3"
+                    HeightRequest="33"
+                    FontSize="Micro"
+                    FontAttributes="Bold"
+                    Clicked="AddCredits_Clicked"
+                    HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Padding="20"
+                     RelativeLayout.YConstraint="{ConstraintExpression
+            Type=RelativeToView,
+            ElementName=upperBar,
+            Property=Height,
+            Factor=1,
+            Constant=30}"
+                     RelativeLayout.WidthConstraint="{ConstraintExpression
+            Type=RelativeToParent,
+            Property=Width,
+            Factor=1}">
+            <Label Text="Why add credits?"
+                   FontSize="15"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label FontSize="13"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center">
+                Credits ensure that you can save 
+your game progress 
+at any moment in time.
+            </Label>
+        </StackLayout>
+    </RelativeLayout>
+</ContentPage>

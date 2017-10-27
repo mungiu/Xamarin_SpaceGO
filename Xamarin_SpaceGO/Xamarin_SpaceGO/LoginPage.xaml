@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="#127ac7" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.LoginPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform = "iOS" Value="0,20,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="0" VerticalOptions="Center">
+            <Label Text="Welcome to Space"
+                   HorizontalOptions="Center" 
+                   TextColor="White"
+                   FontSize="Large"
+                   FontAttributes="Bold"/>
+            <Label Text="Find your spaceship"
+                   HorizontalOptions="Center"
+                   TextColor="WhiteSmoke"/>
+        </StackLayout>
+
+        <Button Text="Login"
+                    Grid.Row="1"
+                    BackgroundColor="#1dabf0"
+                    TextColor="WhiteSmoke"
+                    Margin="2"/>
+        <Button Text="Register"
+                    Grid.Row="2"
+                    BackgroundColor="#1dabf0"
+                    TextColor="WhiteSmoke"
+                    Margin="2"/>
+    </Grid>
+</ContentPage>

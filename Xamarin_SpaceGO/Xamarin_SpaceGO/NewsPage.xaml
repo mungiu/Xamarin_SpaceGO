@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="Black" 
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin_SpaceGO.NewsPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform = "iOS" Value="0,20,0,0"/>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <AbsoluteLayout>
+        <Image x:Name="image"
+               Aspect="AspectFill"
+               AbsoluteLayout.LayoutBounds="0,0,1,1" 
+               AbsoluteLayout.LayoutFlags="All"/>
+        <Label x:Name="userID"
+               FontSize="Medium"
+               TextColor="White"
+               HorizontalTextAlignment="Center"
+               AbsoluteLayout.LayoutBounds="0,0,1,20" 
+               AbsoluteLayout.LayoutFlags="PositionProportional, WidthProportional" />
+        <StackLayout Orientation="Horizontal"
+                     AbsoluteLayout.LayoutBounds="1,1,1,0.15"
+                     AbsoluteLayout.LayoutFlags="All"
+                     BackgroundColor="Black"
+                     Opacity="0.5"
+                     Padding="20,0,20,0">
+            <Button Text="Back"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Red"
+                    FontSize="Micro"
+                    WidthRequest="50"
+                    HorizontalOptions="Start"
+                    VerticalOptions="Center"
+                    Clicked="BtnBackClicked"/>
+            <Button Text="Bookmark"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Red"
+                    FontSize="Micro"
+                    WidthRequest="80"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Center"
+                    Clicked="BtnBookmarkClicked"/>
+            <Button Text="Next"
+                    TextColor="WhiteSmoke"
+                    BackgroundColor="Red"
+                    FontSize="Micro"
+                    WidthRequest="50"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    Clicked="BtnNextClicked"/>
+        </StackLayout>
+        <StackLayout Padding="5,20,5,0" Spacing="2"
+                     AbsoluteLayout.LayoutBounds="0,0.82,1,0.2"
+                     AbsoluteLayout.LayoutFlags="All">
+            <Label x:Name="bookmarkCount"
+                   FontAttributes="Bold"
+                   FontSize="Micro"/>
+            <Label FontSize="Micro"
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="End">
+                This planet has been inhabited by the Cibua nation. 
+It's surface is covered with liqud gas which Cibua 
+refine and sell to nearby space stations as fuel.
+            </Label>
+        </StackLayout>
+        <ActivityIndicator Color="WhiteSmoke" 
+                           IsRunning="{Binding Source={x:Reference image}, Path=IsLoading}"
+                           AbsoluteLayout.LayoutBounds="0.5,0.5, 25,25"
+                           AbsoluteLayout.LayoutFlags="PositionProportional"/>
+    </AbsoluteLayout>
+</ContentPage>

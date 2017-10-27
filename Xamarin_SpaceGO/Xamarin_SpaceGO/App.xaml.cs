@@ -13,7 +13,7 @@ namespace Xamarin_SpaceGO
         {
             InitializeComponent();
 
-            MainPage = new Xamarin_SpaceGO.MainPage();
+            MainPage = new Xamarin_SpaceGO.NewsPage();
         }
 
         protected override void OnStart()
